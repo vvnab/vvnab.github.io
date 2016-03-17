@@ -1,28 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>vvnab</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1 0 auto;
+    }
+
+    .card-image .img {
+      height: 192px;
+      width: 400px;
+    }
+  </style>
 </head>
+
 <body>
-  <div class="section">
+  <nav>
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo">vvnab</a>
+    </div>
+  </nav>
+
+  <main>
     <div class="container">
       <div class="row">
-        <div class="col s12">
-          <ul>
-            <li>
-              <a href="//vvnab.github.io/credo-www-static">Такси КРЕДО</a>
-            </li>
-          </ul>
+
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-image">
+              <a href="//vvnab.github.io/credo-www-static" target="_blank">
+                <img src="img/credo.png">
+              </a>
+            </div>
+            <div class="card-action">
+              <a href="//vvnab.github.io/credo-www-static" target="_blank">перейти</a>
+            </div>
+          </div>
         </div>
+
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-image">
+              <a href="//lizavto.ru" target="_blank">
+                <img src="img/lizavto.png">
+              </a>
+            </div>
+            <div class="card-action">
+              <a href="//lizavto.ru" target="_blank">перейти</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-image">
+              <a href="//komiteplo.ru" target="_blank">
+                <img src="img/komiteplo.png">
+              </a>
+            </div>
+            <div class="card-action">
+              <a href="//komiteplo.ru" target="_blank">перейти</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-image">
+              <a href="//chudo-pi.ru" target="_blank">
+                <img src="img/chudo-pi.png">
+              </a>
+            </div>
+            <div class="card-action">
+              <a href="//chudo-pi.ru" target="_blank">перейти</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-image">
+              <a href="//vip-bereg.ru/location" target="_blank">
+                <img src="img/vip-bereg.png">
+              </a>
+            </div>
+            <div class="card-action">
+              <a href="//vip-bereg.ru/location" target="_blank">перейти</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- end of row-->
+    </div>
+    <!-- end of container-->
+  </main>
+
+  <footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="container">
+        &copy; 2015 - <span id="copy-date"></span> vvnab
       </div>
     </div>
-  </div>
+  </footer>
 </body>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+<script>
+  $(function() {
+    $("#copy-date").text(new Date().getFullYear());
+  })
+</script>
 
 </html>
