@@ -1,97 +1,174 @@
-Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Entry module not found: Error: Can't resolve 'C:\Users\naberezhniy\Copy\work\vvnab.github.io\assets\index.html' in 'C:\Users\naberezhniy\Copy\work\vvnab.github.io':
-  Error: Can't resolve 'C:\Users\naberezhniy\Copy\work\vvnab.github.io\assets\index.html' in 'C:\Users\naberezhniy\Copy\work\vvnab.github.io'
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <script src="https://use.fontawesome.com/63207561e3.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <title>vvnab</title>
+
+  <body>
+    <!-- <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">Logo</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Navbar Link</a></li>
+        </ul>
   
-  - compiler.js:76 
-    [vvnab.github.io]/[html-webpack-plugin]/lib/compiler.js:76:16
-  
-  - Compiler.js:304 compile
-    [vvnab.github.io]/[webpack]/lib/Compiler.js:304:11
-  
-  - Compiler.js:514 applyPluginsAsync.err
-    [vvnab.github.io]/[webpack]/lib/Compiler.js:514:14
-  
-  - Tapable.js:202 next
-    [vvnab.github.io]/[tapable]/lib/Tapable.js:202:11
-  
-  - CachePlugin.js:78 Compiler.<anonymous>
-    [vvnab.github.io]/[webpack]/lib/CachePlugin.js:78:5
-  
-  - Tapable.js:206 Compiler.applyPluginsAsyncSeries
-    [vvnab.github.io]/[tapable]/lib/Tapable.js:206:13
-  
-  - Compiler.js:511 compilation.seal.err
-    [vvnab.github.io]/[webpack]/lib/Compiler.js:511:11
-  
-  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
-    [vvnab.github.io]/[tapable]/lib/Tapable.js:195:46
-  
-  - Compilation.js:671 self.applyPluginsAsync.err
-    [vvnab.github.io]/[webpack]/lib/Compilation.js:671:19
-  
-  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
-    [vvnab.github.io]/[tapable]/lib/Tapable.js:195:46
-  
-  - Compilation.js:662 self.applyPluginsAsync.err
-    [vvnab.github.io]/[webpack]/lib/Compilation.js:662:11
-  
-  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
-    [vvnab.github.io]/[tapable]/lib/Tapable.js:195:46
-  
-  - Compilation.js:657 self.applyPluginsAsync.err
-    [vvnab.github.io]/[webpack]/lib/Compilation.js:657:10
-  
-  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
-    [vvnab.github.io]/[tapable]/lib/Tapable.js:195:46
-  
-  - Compilation.js:653 sealPart2
-    [vvnab.github.io]/[webpack]/lib/Compilation.js:653:9
-  
-  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
-    [vvnab.github.io]/[tapable]/lib/Tapable.js:195:46
-  
-  - Compilation.js:596 Compilation.seal
-    [vvnab.github.io]/[webpack]/lib/Compilation.js:596:8
-  
-  - Compiler.js:508 applyPluginsParallel.err
-    [vvnab.github.io]/[webpack]/lib/Compiler.js:508:17
-  
-  - Tapable.js:289 
-    [vvnab.github.io]/[tapable]/lib/Tapable.js:289:11
-  
-  - Compilation.js:498 _addModuleChain
-    [vvnab.github.io]/[webpack]/lib/Compilation.js:498:11
-  
-  - Compilation.js:381 errorAndCallback.bail
-    [vvnab.github.io]/[webpack]/lib/Compilation.js:381:4
-  
-  - Compilation.js:404 moduleFactory.create
-    [vvnab.github.io]/[webpack]/lib/Compilation.js:404:13
-  
-  - NormalModuleFactory.js:235 factory
-    [vvnab.github.io]/[webpack]/lib/NormalModuleFactory.js:235:20
-  
-  - NormalModuleFactory.js:60 resolver
-    [vvnab.github.io]/[webpack]/lib/NormalModuleFactory.js:60:20
-  
-  - NormalModuleFactory.js:127 asyncLib.parallel.e
-    [vvnab.github.io]/[webpack]/lib/NormalModuleFactory.js:127:20
-  
-  - async.js:3861 
-    [vvnab.github.io]/[async]/dist/async.js:3861:9
-  
-  - async.js:421 
-    [vvnab.github.io]/[async]/dist/async.js:421:16
-  
-  - async.js:996 iteratorCallback
-    [vvnab.github.io]/[async]/dist/async.js:996:13
-  
-  - async.js:906 
-    [vvnab.github.io]/[async]/dist/async.js:906:16
-  
-  - async.js:3858 
-    [vvnab.github.io]/[async]/dist/async.js:3858:13
-  
-</pre>
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="#">Navbar Link</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav> -->
+
+    <div id="index-banner" class="parallax-container">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <br><br>
+          <h1 class="header center white-text text-lighten-2">Parallax Design</h1>
+          <div class="row center">
+            <h5 class="header white-text col s12 light">Современные адаптивные сайты на Material Design от Google</h5>
+          </div>
+          <div class="row center">
+            <a href="#" id="download-button" class="pulse btn-large waves-effect waves-light deep-orange">
+            Заказать
+          </a>
+          </div>
+          <br><br>
+
+        </div>
+      </div>
+      <div class="parallax"><img src="images/2b3bf8329c834a0db49670b4d85dedfb.jpg" alt="Unsplashed background img 1"></div>
+    </div>
+
+
+    <div class="container">
+      <div class="section">
+
+        <!--   Icon Section   -->
+        <div class="row">
+          <div class="col m12 l4">
+            <div class="icon-block">
+              <h2 class="center orange-text"><i class="material-icons">flash_on</i></h2>
+              <h5 class="center">Высокая скорость разработки</h5>
+
+              <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components.
+                Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+            </div>
+          </div>
+
+          <div class="col m12 l4">
+            <div class="icon-block">
+              <h2 class="center light-green-text"><i class="material-icons">group</i></h2>
+              <h5 class="center">Ориентированы на пользователя</h5>
+
+              <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates
+                components and animations that provide more feedback to users. Additionally, a single underlying responsive
+                system across all platforms allow for a more unified user experience.</p>
+            </div>
+          </div>
+
+          <div class="col m12 l4">
+            <div class="icon-block">
+              <h2 class="center teal-text"><i class="material-icons">settings</i></h2>
+              <h5 class="center">Просты в использовании</h5>
+
+              <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We
+                are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="parallax-container valign-wrapper">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <div class="row center">
+            <h5 class="header col s12 light">Современные адаптивные сайты на Material Design от Google</h5>
+          </div>
+        </div>
+      </div>
+      <div class="parallax"><img src="images/fb06c7dc5a99a24bbad166a551481e85.jpg" alt="Unsplashed background img 2"></div>
+    </div>
+
+    <div class="container">
+      <div class="section">
+
+        <div class="row">
+          <div class="col s12 center">
+            <h3><i class="mdi-content-send brown-text"></i></h3>
+            <h4>Форма заказа</h4>
+            <div class="input-field col l8 offset-l2 m12">
+              <i class="material-icons prefix">account_box</i>
+              <input id="name" type="text" class="validate" required="required">
+              <label for="name" data-error="обязательное поле">Ваше имя</label>
+            </div>
+            <div class="input-field col l8 offset-l2 m12">
+              <i class="material-icons prefix">phone</i>
+              <input id="phone" type="tel" pattern='[\+]\d{1} [\(]\d{3}[\)] \d{3}[\-]\d{2}[\-]\d{2}' class="validate">
+              <label for="phone" data-error="неверный номер">Ваш телефон</label>
+            </div>
+            <div class="input-field col l8 offset-l2 m12">
+              <i class="material-icons prefix">email</i>
+              <input id="email" type="email" class="validate">
+              <label for="email" data-error="неверный e-mail">Ваш e-mail</label>
+            </div>
+            <div class="col s12">
+              <a class="waves-effect waves-light btn orange"><i class="material-icons right">send</i>Отправить</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="parallax-container valign-wrapper">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <div class="row center">
+            <h5 class="header col s12 light">Современные адаптивные сайты на Material Design от Google</h5>
+          </div>
+        </div>
+      </div>
+      <div class="parallax"><img src="images/81bd1fd83c7c52971d54bd2b0196594e.jpg" alt="Unsplashed background img 3"></div>
+    </div>
+
+    <footer class="page-footer orange darken-3">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">О нас</h5>
+            <p class="grey-text text-lighten-4">
+              We are a team of college students working on this project like it's our full time job. Any amount would help support and
+              continue development on this project and is greatly appreciated.
+            </p>
+          </div>
+          <div class="col l6 s12 right">
+            <h5 class="white-text">Контакты</h5>
+            <ul class="contacts">
+              <li><a class="white-text" href="#!"><i class="fa fa-envelope"></i> vvnab@mail.ru</a></li>
+              <li><a class="white-text" href="#!"><i class="fa fa-skype"></i> vvnab76</a></li>
+              <li><a class="white-text" href="#!"><i class="fa fa-telegram"></i> @vvnab</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          &copy; 2010 - <span id="copy-date"></span>
+          <a class="white-text" href="http://materializecss.com">vvnab</a>
+        </div>
+      </div>
+    </footer>
+  <script type="text/javascript" src="bundle.js"></script></body>
+
+</html>
