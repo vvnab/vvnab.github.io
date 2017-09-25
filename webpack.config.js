@@ -19,7 +19,10 @@ module.exports = {
             }]
         }, {
             test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-            loader: 'url-loader'
+            loader: 'fils-loader',
+            options: {
+                outputPath: 'fonts/'
+            }
         }, {
             test: /\.(jpg|png|svg)$/,
             loader: 'file-loader',
