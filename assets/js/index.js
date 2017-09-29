@@ -13,16 +13,22 @@ import "../css/main.scss";
             mask: '+{7} (000) 000-00-00'
         });
 
-        var tapTarget = setTimeout(function() {
-            $('.tap-target').tapTarget('open');
-        }, 10000);
+        var tapTarget;
 
         Materialize.scrollFire([{
-            selector: '.scroll-spy',
-            offset: 200,
+            selector: '[name=form]',
+            offset: 100,
             callback: function() {
                 clearTimeout(tapTarget);
                 $('.tap-target').tapTarget('close');
+            }
+        }, {
+            selector: '.section-1',
+            offset: 100,
+            callback: function() {
+                tapTarget = setTimeout(function() {
+                    $('.tap-target').tapTarget('open');
+                }, 5000);
             }
         }]);
     }); // end of document ready
