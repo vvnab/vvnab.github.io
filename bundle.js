@@ -80,14 +80,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 (function($) {
     $(function() {
 
-        $('.button-collapse').sideNav();
+        // $('.button-collapse').sideNav();
         $('.parallax').parallax();
-
         $("#copy-date").text(new Date().getFullYear());
-        var phoneMask = new IMask(
-            document.getElementById('phone'), {
-                mask: '+{7} (000) 000-00-00'
-            });
+
+        var phoneMask = new IMask(document.getElementById('phone'), {
+            mask: '+{7} (000) 000-00-00'
+        });
+
+        var tapTarget = setTimeout(function() {
+            $('.tap-target').tapTarget('open');
+        }, 10000);
+
+        Materialize.scrollFire([{
+            selector: '.scroll-spy',
+            offset: 200,
+            callback: function() {
+                clearTimeout(tapTarget);
+                $('.tap-target').tapTarget('close');
+            }
+        }]);
     }); // end of document ready
 })(jQuery); // end of jQuery name space
 
@@ -2585,7 +2597,7 @@ exports = module.exports = __webpack_require__(4)(undefined);
 
 
 // module
-exports.push([module.i, "/* Custom Stylesheet */\n/**\r\n * Use this file to override Materialize files so you can update\r\n * the core Materialize files in the future\r\n *\r\n * Made By MaterializeCSS.com\r\n */\nnav ul a,\nnav .brand-logo {\n  color: #444; }\n\np {\n  line-height: 2rem; }\n\n.button-collapse {\n  color: #26a69a; }\n\n.parallax-container {\n  min-height: 380px;\n  line-height: 0;\n  height: auto;\n  color: rgba(255, 255, 255, 0.9); }\n\n.parallax-container .section {\n  width: 100%; }\n\n@media only screen and (max-width: 992px) {\n  .parallax-container .section {\n    position: absolute;\n    top: 40%; }\n  #index-banner .section {\n    top: 10%; } }\n\n@media only screen and (max-width: 600px) {\n  #index-banner .section {\n    top: 0; } }\n\n.icon-block {\n  padding: 0 15px; }\n\n.icon-block .material-icons {\n  font-size: 7rem; }\n\nfooter.page-footer {\n  margin: 0; }\n\nul.contacts {\n  line-height: 200%;\n  font-size: 1.2rem; }\n  ul.contacts .fa {\n    font-size: 2rem;\n    width: 3rem;\n    text-align: center; }\n  ul.contacts li a {\n    vertical-align: top; }\n", ""]);
+exports.push([module.i, "/* Custom Stylesheet */\n/**\r\n * Use this file to override Materialize files so you can update\r\n * the core Materialize files in the future\r\n *\r\n * Made By MaterializeCSS.com\r\n */\nnav ul a,\nnav .brand-logo {\n  color: #444; }\n\np {\n  line-height: 2rem; }\n\n.button-collapse {\n  color: #26a69a; }\n\n.parallax-container {\n  min-height: 380px;\n  line-height: 0;\n  height: auto;\n  color: rgba(255, 255, 255, 0.9); }\n\n.parallax-container .section {\n  width: 100%; }\n\n@media only screen and (max-width: 992px) {\n  .parallax-container .section {\n    position: absolute;\n    top: 40%; }\n  #index-banner .section {\n    top: 10%; } }\n\n@media only screen and (max-width: 600px) {\n  #index-banner .section {\n    top: 0; } }\n\n.icon-block {\n  padding: 0 15px; }\n\n.icon-block .material-icons {\n  font-size: 7rem; }\n\nfooter.page-footer {\n  margin: 0; }\n\nul.contacts {\n  line-height: 200%;\n  font-size: 1.2rem; }\n  ul.contacts li a {\n    vertical-align: top;\n    cursor: pointer; }\n    ul.contacts li a:hover .icon-box {\n      background: rgba(255, 255, 0, 0.4);\n      transition: background-color 200ms linear; }\n    ul.contacts li a .icon-box {\n      background: rgba(255, 255, 255, 0.25);\n      transition: background-color 200ms linear;\n      width: 2.8rem;\n      height: 2.8rem;\n      display: inline-block;\n      border-radius: 50%;\n      text-align: center; }\n      ul.contacts li a .icon-box:not(last-child) {\n        margin-bottom: 0.5rem; }\n    ul.contacts li a i.fa {\n      font-size: 1.5rem;\n      margin-top: 10%;\n      vertical-align: middle; }\n", ""]);
 
 // exports
 
