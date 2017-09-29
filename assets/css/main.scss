@@ -63,12 +63,29 @@ footer.page-footer {
 ul.contacts {
     line-height: 200%;
     font-size: 1.2rem;
-    .fa {
-        font-size: 2rem;
-        width: 3rem;
-        text-align: center;
-    }
     li a {
         vertical-align: top;
+        cursor: pointer;
+        &:hover .icon-box {
+            background: rgba(255, 255, 0, 0.40);
+            transition: background-color 200ms linear;
+        }
+        .icon-box {
+            background: rgba(255, 255, 255, 0.25);
+            transition: background-color 200ms linear;
+            width: 2.8rem;
+            height: 2.8rem;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            &:not(last-child) {
+                margin-bottom: 0.5rem;
+            }
+        }
+        i.fa {
+            font-size: 1.5rem;
+            margin-top: 10%;
+            vertical-align: middle;
+        }
     }
 }
