@@ -66,7 +66,6 @@ import "../css/main.scss";
             console.log("OK", name, phone, email);
             Materialize.toast('Сообщение успешно отправлено', 4000, "red");
           });
-
         }
       }
     )

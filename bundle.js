@@ -141,7 +141,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             console.log("OK", name, phone, email);
             Materialize.toast('Сообщение успешно отправлено', 4000, "red");
           });
-
         }
       }
     )
