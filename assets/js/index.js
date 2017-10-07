@@ -56,7 +56,7 @@ import "../css/main.scss";
           console.error("form error")
         } else {
           var message = {
-            from: "job@vvnab.ru",
+            from: "job@vvnab.site",
             to: "vvnab@mail.ru",
             subject: `Заказ сайта`,
             text: `Имя: ${name}\nТелефон: ${phone}\nE-Mail: ${email}`
