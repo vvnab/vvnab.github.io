@@ -131,7 +131,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
           console.error("form error")
         } else {
           var message = {
-            from: "job@vvnab.ru",
+            from: "order@vvnab.site",
             to: "vvnab@mail.ru",
             subject: `Заказ сайта`,
             text: `Имя: ${name}\nТелефон: ${phone}\nE-Mail: ${email}`
