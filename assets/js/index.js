@@ -1,6 +1,6 @@
 import "./imask.js";
 import "../css/main.scss";
-
+import "whatwg-fetch";
 
 (function($) {
   $(function() {
@@ -32,19 +32,6 @@ import "../css/main.scss";
       }
     }]);
 
-    function postAjax(url, data, success) {
-      const params = JSON.stringify(data);
-      let xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
-      xhr.open('POST', url);
-      xhr.onreadystatechange = function() {
-        if (xhr.readyState > 3 && xhr.status == 200) {
-          success(xhr.responseText);
-        }
-      };
-      xhr.setRequestHeader('Content-Type', 'application/json');
-      xhr.send(params);
-      return xhr;
-    }
 
     $("#send-email").click(
       function() {
@@ -62,10 +49,19 @@ import "../css/main.scss";
             text: `Имя: ${name}\nТелефон: ${phone}\nE-Mail: ${email}`
           };
           $("#send-email").attr("disabled", true);
-          postAjax("https://api-driver.taxi21.ru/utils/mail?mail-access-key=123456", message, result => {
-            console.log("OK", name, phone, email);
-            Materialize.toast('Сообщение успешно отправлено', 4000, "red");
-          });
+          fetch("https://api-driver.taxi21.ru/utils/mail?mail-access-key=123456", {
+            method: "POST",
+            mode: "cors",
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(message)
+          })
+            .then(result => {
+              console.log("OK", name, phone, email);
+              Materialize.toast('Сообщение успешно отправлено', 4000, "red");
+            })
+            .catch(error => console.error(error));
         }
       }
     )
