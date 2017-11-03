@@ -56,12 +56,10 @@ import "whatwg-fetch";
               'Content-Type': 'application/json'
             },
             body: JSON.stringify(message)
-          })
-            .then(result => {
-              console.log("OK", name, phone, email);
-              Materialize.toast('Сообщение успешно отправлено', 4000, "red");
-            })
-            .catch(error => console.error(error));
+          }).then(result => {
+            console.log("OK", name, phone, email);
+            Materialize.toast('Сообщение успешно отправлено', 4000, "red");
+          }).catch(error => console.error(error));
         }
       }
     )
